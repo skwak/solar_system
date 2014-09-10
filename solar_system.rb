@@ -14,7 +14,7 @@ class SolarSystem
 
   def p_names
     @planets.each do |name|
-    puts planet.name
+      puts planet.name
     end
   end
 end
