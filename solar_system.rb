@@ -6,14 +6,14 @@ class SolarSystem
     @form_date = 4600000000
   end
 
-  def so_many_planets(many_planets)
-    many_planets.each do |hash|
+  def so_many_planets(planets)
+    planets.each do |hash|
       @planets << Planet.new(hash)
     end
   end
 
   def p_names
-    @planets.each do |name|
+    @planets.each do |planet|
       puts planet.name
     end
   end
@@ -66,7 +66,7 @@ planets = [
     rotation: 0.7}
     ]
 
-# test:
+# test1:
 # planets.each do |a|
 #   glob = Planet.new(a)
 #   puts "The planet #{glob.name} has an orbit of #{glob.orbit} days, has #{glob.moons} moon(s), and rotates every #{glob.rotation} day(s)."
@@ -77,6 +77,15 @@ planets = [
 # puts ss.planets
 # ss.form_date.push(4600000000)
 
-ss = SolarSystem.new
-puts ss.so_many_planets(planets)
-puts ss.p_names
+
+#test2:
+# ss = SolarSystem.new
+# ss.so_many_planets(planets)
+#
+# puts "You, space explorer. Me, Master of the Universe.
+# You can't actually go anywhere. But I can give you some data.
+# What planet do you want to learn about today?"
+#
+# puts ss.p_names
+#
+# @name = gets.chomp.capitalize
